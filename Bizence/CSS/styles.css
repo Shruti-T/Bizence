@@ -74,10 +74,10 @@ nav{
   }
   
   body {
-    margin: var(--header-height) 0 0 0;
+  /*  margin: var(--header-height) 0 0 0;*/
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var(--body-color);
+    background-color: #C2EDCE;
     color: var(--text-color);
     line-height: 1.6;
   }
@@ -193,6 +193,9 @@ nav{
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
     }
+    img {
+        size: 40%;
+    }
     @media screen and (min-width: 768px) {
         body {
           margin: 0;
@@ -203,6 +206,9 @@ nav{
         }
       /* For tall screens on mobiles y desktop*/
 @media screen and (min-height: 721px) {
+    body{
+        /*  margin: 3rem 0 0 0; */
+      }
     .home__container {
       height: 640px;
     }
@@ -232,4 +238,4 @@ nav{
   .right {
     left: 0%;
   }
-}
+} }

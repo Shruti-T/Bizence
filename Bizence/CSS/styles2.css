@@ -17,7 +17,7 @@ nav{
 }
 body{
    /* margin: 2rem 0 0 0; */
-    background-color: #fff;
+    background-color: #c2edfe;
     color: var(--dark-color);
     font-family: var(--body-font);
 }
