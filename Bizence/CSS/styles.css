@@ -1,0 +1,235 @@
+nav{
+    background-color: #badfe7;
+}
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+    --header-height: 3rem; /*========== Font and typography ==========*/
+    --body-font: "Poppins", sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== Margenes ==========*/
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  @media screen and (min-width: 768px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+      --smaller-font-size: 0.813rem;
+    }
+  }
+  
+  /*========== BASE ==========*/
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /*========== Variables Dark theme ==========*/
+  body.dark-theme {
+    --title-color: #f1f3f2;
+    --text-color: #c7d1cc;
+    --body-color: #1d2521;
+    --container-color: #27302c;
+  }
+  
+  /*========== Button Dark/Light ==========*/
+  .change-theme {
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p,
+  ul {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    
+  }
+/*========== CLASS CSS ==========*/
+.section {
+    padding: 4rem 0 2rem;
+  }
+  
+  .section-title,
+  .section-subtitle {
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-3);
+  }
+  
+  .section-subtitle {
+    display: block;
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+  }
+  
+  /*========== LAYOUT ==========*/
+  .bd-container {
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+  }.bd-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+  }
+/*========== BUTTONS ==========*/
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 20rem;
+    transition: 0.3s;
+  }
+  
+  .button:hover {
+    background-color: var(--first-color-alt);
+  }
+  
+  /*========== ABOUT ==========*/
+  .about__data {
+    text-align: center;
+  }
+  
+  .about__description {
+    margin-bottom: var(--mb-3);
+  }
+  
+  .about__img {
+    width: 350px;
+    height: 350px;
+    justify-self: center;
+  }
+/*========== HOME ==========*/
+.home__container {
+    height: calc(100vh - var(--header-height));
+    align-content: center;
+  }
+  
+  .home__title {
+    font-size: var(--biggest-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb-1);
+    margin-top: 50px;
+  }
+  
+  .home__img {
+    width: 400px;
+    height: 400px;
+    justify-self: center;
+  }/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 576px) {
+    .home__container,
+    .about__container,
+    .app__container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    @media screen and (min-width: 768px) {
+        body {
+          margin: 0;
+        }
+      
+        .section {
+          padding-top: 8rem;
+        }
+      /* For tall screens on mobiles y desktop*/
+@media screen and (min-height: 721px) {
+    .home__container {
+      height: 640px;
+    }
+  }/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    box-sizing: border-box;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(43, 115, 209, 0.2) transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
