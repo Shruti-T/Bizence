@@ -1,18 +1,18 @@
-const company = require('./model');
-const APIFeatures = require('./../util/apiFeatures');
+const company = require('../modelAndcontroller/model');
+const APIFeatures = require('../apiFeature/apiFeatures');
 
 exports.getAllCompany = async (req,res) =>{
     try{     
         console.log(req.query);
 
         //EXECUTE THE QUERY
-        const features = new APIFeatures(Tour.find(), req.query).filter().sort().limitFields().paginate();
-        const tours = await features.query;
+        const features = new APIFeatures(company.find(), req.query).filter().sort().limitFields().paginate();
+        const company = await features.query;
         //query.sort().select().fields().limit().skip()
         //SEND response
         res.status(200).json({
             status: 'success',
-            result: tours.length,
+            result: company.length,
             data:{
             company
             }
