@@ -8,42 +8,54 @@ const companySchema = new mongoose.Schema({
         unique: true,
         trim:true
     },
-    contact:{
-        type: Number,
-        require: [true, 'A tour must have a duration']
-    },
-    rating: {
-        type: Number,
-        default: 4.5
-    },
     description:{
         type: String,
         require: [true, 'A company must have a description'],
         trim:true
-    },
-    imageCover:{
-        type:String,
-        require:[true, 'A tour must have a cover image']
-    },
-    createdAt:{
-        type: Date,
-        default: Date.now(),
-        select: false
-    },
-    address:{
-        type: String,
-        trim: true,
-        default: 'In house'
-    },
-    websiteLink:{
-        type:String,
-        trim:true
-    },
+    },   
     domainType:{
-        type: String,
-        trim: true,
-        require:['A company domain must be specified']
+            type: String,
+            trim: true,
+            require:['A company domain must be specified']
     }
+
+
+    // contact:{
+    //     type: Number,
+    //     require: [true, 'A tour must have a duration']
+    // },
+    // rating: {
+    //     type: Number,
+    //     default: 4.5
+    // },
+    // description:{
+    //     type: String,
+    //     require: [true, 'A company must have a description'],
+    //     trim:true
+    // },
+    // imageCover:{
+    //     type:String,
+    //     require:[true, 'A tour must have a cover image']
+    // },
+    // createdAt:{
+    //     type: Date,
+    //     default: Date.now(),
+    //     select: false
+    // },
+    // address:{
+    //     type: String,
+    //     trim: true,
+    //     default: 'In house'
+    // },
+    // websiteLink:{
+    //     type:String,
+    //     trim:true
+    // },
+    // domainType:{
+    //     type: String,
+    //     trim: true,
+    //     require:['A company domain must be specified']
+    // }
 })
 
 
