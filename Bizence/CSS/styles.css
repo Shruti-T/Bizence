@@ -239,3 +239,13 @@ nav{
     left: 0%;
   }
 } }
+
+.footer__content{
+  overflow-y:auto ;
+   place-items: center;
+}
+footer{
+  background-color: #badfe7;
+  height : 40 px;
+ width : 100%;
+}

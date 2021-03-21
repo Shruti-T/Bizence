@@ -61,12 +61,23 @@ article:nth-child(3){
 article:nth-child(4){
     background-color: var(--second-color);
 }
+article:nth-child(5){
+    background-color: var(--second-color);
+}
+article:nth-child(6){
+    background-color: var(--second-color);
+}
+article:nth-child(7){
+    background-color: var(--second-color);
+}
+article:nth-child(8){
+    background-color: var(--second-color);
+}
 .card__img{
     width: 180px;
     height: auto;
     padding: 3rem 0;
-    transition: .5s;
-}
+   }
 .card__name{
     position: absolute;
     left: -25%;
@@ -137,3 +148,12 @@ article:nth-child(4){
         margin-right: auto;
     }
 }
+.footer__content{
+    overflow-y:auto ;
+     place-items: center;
+  }
+  footer{
+    background-color: #badfe7;
+    height : 40 px;
+   width : 100%;
+  }
