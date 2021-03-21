@@ -1,10 +1,10 @@
 const express = require('express');
-const Controller = require('../modelAndcontroller/controller');
+const Controller = require('./../modelAndcontroller/controller');
 const router = express.Router();
-
 
 router
     .route('/')
-    .get(Controller.getAllCompany);
+    .get(Controller.getAllCompanies); 
+
 
 module.exports = router;
