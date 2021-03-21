@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const slugify =  require('slugify');
 
-const CompanySchema = new mongoose.Schema({
+const companySchema = new mongoose.Schema({
     name:{
         type: String,
         require: [true,'A tour must have a name'],
@@ -47,6 +47,6 @@ const CompanySchema = new mongoose.Schema({
 })
 
 
-const Company = mongoose.model('Company', CompanySchema);
+const Company = mongoose.model('Company', companySchema);
 
 module.exports = Company;
